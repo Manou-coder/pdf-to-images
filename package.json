@@ -1,0 +1,11 @@
+{
+  "name": "mcoder-pdf-to-img",
+  "version": "1.0.0",
+  "description": "transform pdf to images without imagic",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "m-coder",
+  "license": "ISC"
+}
