@@ -1,0 +1,13 @@
+# Parcel cache directory
+.cache/
+.parcel-cache/
+
+# Parcel build output directory
+dist/
+
+# Node.js modules directory
+node_modules/
+
+# Dependency lockfile files
+yarn.lock
+package-lock.json
