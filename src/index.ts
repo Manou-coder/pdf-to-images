@@ -1,11 +1,12 @@
-export const age = 24
-console.log('age: ', age)
+// Chunk an array into smaller arrays of a specified size
+export const chunk = (arr: Array<any>, size: number) => {
+  return Array.from({ length: Math.ceil(arr.length / size) }, (_, i) =>
+    arr.slice(i * size, i * size + size)
+  )
+}
 
-export const prenom = 'manou'
-console.log('prenom: ', prenom)
+const array = ['1', 2, 3, 'manou']
+console.log('array: ', array)
 
-export const salary = 3000
-console.log('salary: ', salary)
-
-export const manou = ['manou']
-console.log('manou: ', manou)
+const chunkArray = chunk(array, 3)
+console.log('chunk: ', chunkArray)
