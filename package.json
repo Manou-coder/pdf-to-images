@@ -1,5 +1,5 @@
 {
-  "name": "mcoder-pdf-to-img",
+  "name": "@m-coder/pdf-to-img",
   "version": "1.0.0",
   "description": "transform pdf to images without imagic",
   "scripts": {
@@ -20,6 +20,7 @@
     "@parcel/packager-ts": "^2.8.3",
     "@parcel/transformer-typescript-types": "^2.8.3",
     "@types/jest": "^29.4.0",
+    "@types/pdfjs-dist": "^2.10.378",
     "@typescript-eslint/eslint-plugin": "^5.54.1",
     "@typescript-eslint/parser": "^5.54.1",
     "eslint": "^8.35.0",
@@ -34,5 +35,9 @@
   },
   "jest": {
     "preset": "ts-jest"
+  },
+  "dependencies": {
+    "canvas": "^2.11.0",
+    "pdfjs-dist": "^3.4.120"
   }
 }
