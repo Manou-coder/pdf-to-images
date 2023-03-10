@@ -1,5 +1,5 @@
 import { createCanvas } from 'canvas'
-import fs from 'fs'
+import fs from 'node:fs'
 import * as pdfjsLib from 'pdfjs-dist/legacy/build/pdf.js'
 
 export const transform = async ({
