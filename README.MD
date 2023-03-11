@@ -1,24 +1,24 @@
-# pdf-to-img
+# @m-coder/pdftoimage
 
 Convert PDF files 📄 to images 📷 without requiring any software like ImageMagick 🔄.
 
 ## Install
 
 ```sh
-npm install pdf-to-img
+npm install @m-coder/pdftoimage
 ```
 
 ## Example
 
 ```js
-const { convertPDFtoIMG } = require('pdf-to-img')
+const { convertPDFtoIMG } = require('@m-coder/pdftoimage')
 
 const convert = async () => {
   try {
     await convertPDFtoIMG({
       pdfPath: 'my-pdf.pdf',
       imagePath: 'my-image', // or 'my-image.png'
-      // scale: 2, optional - default value 1.5
+      // scale: 2, optional - default value 1.5 (the larger the scale, the better the rendering quality.)
       // png: true, optional - default value true (if false will convert to Jpeg)
     })
     console.log('Conversion successful!')
@@ -28,18 +28,4 @@ const convert = async () => {
 }
 
 convert()
-```
-
-The `pdf` function accepts either a path to the file on disk, or a data URL (e.g. `data:application/pdf;base64,...`)
-
-### Options
-
-You can supply a second argument which is an object of options:
-
-```js
-const doc = await pdf('example.pdf', {
-  password: '...', // if the PDF is encrypted
-
-  scale: 2.0, // use this for PDFs with high resolution images if the generated image is low quality
-})
 ```
