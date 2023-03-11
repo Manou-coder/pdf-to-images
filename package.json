@@ -1,5 +1,5 @@
 {
-  "name": "pdftoimg",
+  "name": "@m-coder/pdftoimage",
   "version": "1.0.0",
   "description": "Convert PDF files 📄 to images 📷 without requiring any software like ImageMagick 🔄.",
   "keywords": [
