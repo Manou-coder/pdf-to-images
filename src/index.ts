@@ -71,19 +71,3 @@ export const convertPDFtoIMG = async ({
 function hasExtension(filename: string, ext: string): boolean {
   return filename.endsWith(ext)
 }
-
-const convert = async () => {
-  try {
-    await convertPDFtoIMG({
-      pdfPath: 'my-pdf.pdf',
-      imagePath: 'my-image', // or 'my-image.png'
-      scale: 2,
-      png: true,
-    })
-    console.log('Conversion successful!')
-  } catch (error) {
-    console.error('Error during conversion:', error)
-  }
-}
-
-convert()

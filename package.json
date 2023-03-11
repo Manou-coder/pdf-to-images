@@ -1,5 +1,5 @@
 {
-  "name": "@m-coder/pdf-to-img",
+  "name": "pdf-to-img",
   "version": "1.0.0",
   "description": "Convert PDF files 📄 to images 📷 without requiring any software like ImageMagick 🔄.",
   "keywords": [
@@ -27,6 +27,7 @@
     "@parcel/packager-ts": "^2.8.3",
     "@parcel/transformer-typescript-types": "^2.8.3",
     "@types/jest": "^29.4.0",
+    "@types/node": "^18.15.0",
     "@types/pdfjs-dist": "^2.10.378",
     "@typescript-eslint/eslint-plugin": "^5.54.1",
     "@typescript-eslint/parser": "^5.54.1",
