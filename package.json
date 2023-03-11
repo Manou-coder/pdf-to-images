@@ -1,7 +1,7 @@
 {
   "name": "@m-coder/pdftoimage",
   "author": "Emmanuel Haouzi",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Convert PDF files 📄 to images 📷 without requiring any software like ImageMagick 🔄.",
   "repository": {
     "type": "git",
