@@ -5,3 +5,6 @@
 .prettierrc
 coverage
 tests/
+.eslintrc.json
+tsconfig.json
+src/

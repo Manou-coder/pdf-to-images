@@ -1,7 +1,12 @@
 {
   "name": "@m-coder/pdftoimage",
+  "author": "Emmanuel Haouzi",
   "version": "1.0.0",
   "description": "Convert PDF files 📄 to images 📷 without requiring any software like ImageMagick 🔄.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Manou-coder/pdf-to-images"
+  },
   "keywords": [
     "pdf",
     "image",
@@ -21,7 +26,6 @@
   "types": "dist/types.d.ts",
   "source": "src/index.ts",
   "main": "dist/main.js",
-  "author": "m-coder",
   "license": "ISC",
   "devDependencies": {
     "@parcel/packager-ts": "^2.8.3",
