@@ -1,49 +1,33 @@
 # pdf-to-img
 
-[![Build Status](https://github.com/k-yle/pdf-to-img/workflows/Build%20and%20Test/badge.svg)](https://github.com/k-yle/pdf-to-img/actions)
-[![Coverage Status](https://coveralls.io/repos/github/k-yle/pdf-to-img/badge.svg?branch=main&t=LQmPNl)](https://coveralls.io/github/k-yle/pdf-to-img?branch=main)
-[![npm version](https://badge.fury.io/js/pdf-to-img.svg)](https://badge.fury.io/js/pdf-to-img)
-[![npm](https://img.shields.io/npm/dt/pdf-to-img.svg)](https://www.npmjs.com/package/pdf-to-img)
-![npm bundle size](https://img.shields.io/bundlephobia/minzip/pdf-to-img)
-
-📃📸 Converts PDFs to images in nodejs with no native dependencies.
-
-Useful for unit tests of PDFs
-
-Supports nodejs v14, v16, v18 and v19.
+Convert PDF files 📄 to images 📷 without requiring any software like ImageMagick 🔄.
 
 ## Install
 
 ```sh
-npm install -S pdf-to-img
+npm install pdf-to-img
 ```
 
 ## Example
 
-Using jest and [jest-image-snapshot](https://npm.im/jest-image-snapshot).
-
 ```js
-const { pdf } = require("pdf-to-img");
+const { convertPDFtoIMG } = require('pdf-to-img')
 
-it("generates a PDF", async () => {
-  for await (const page of await pdf("example.pdf")) {
-    expect(page).toMatchImageSnapshot();
+const convert = async () => {
+  try {
+    await convertPDFtoIMG({
+      pdfPath: 'my-pdf.pdf',
+      imagePath: 'my-image', // or 'my-image.png'
+      // scale: 2, optional - default value 1.5
+      // png: true, optional - default value true (if false will convert to Jpeg)
+    })
+    console.log('Conversion successful!')
+  } catch (error) {
+    console.error('Error during conversion:', error)
   }
-});
+}
 
-// or if you want access to more details:
-
-it("generates a PDF with 2 pages", async () => {
-  const doc = await pdf("example.pdf");
-
-  expect(doc.length).toBe(2);
-  expect(doc.metadata).toEqual({ ... });
-
-  for await (const page of doc) {
-    expect(page).toMatchImageSnapshot();
-  }
-});
-
+convert()
 ```
 
 The `pdf` function accepts either a path to the file on disk, or a data URL (e.g. `data:application/pdf;base64,...`)
